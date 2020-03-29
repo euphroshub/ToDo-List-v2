@@ -8,6 +8,10 @@
   },
   "author": "Euphros",
   "license": "ISC",
+  "engines": {
+    "node": "12.16.1"
+  },
+
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^2.6.1",

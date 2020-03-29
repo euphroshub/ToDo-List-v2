@@ -140,12 +140,17 @@ app.post("/delete", function(req, res){
 
 });
 
-//to test
 app.get("/about", function(req, res){
   res.render("about");
 });
 
-//logging to see if server is working
-app.listen(3000, function() {
-  console.log("Server started on port 3000");
+//listening on the correct port on Heroku
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+
+//logging to see if server is working on port 3000
+app.listen(port, function() {
+  console.log("Server has started successfully!");
 });
