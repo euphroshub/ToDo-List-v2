@@ -11,3 +11,5 @@ Example: https://young-ridge-81833.herokuapp.com/Work
          https://young-ridge-81833.herokuapp.com/Gym
 
 
+It should work perfectly on PC, but i have not done much media queries for this project yet. Might do later if i have some free time.
+
