@@ -14,14 +14,15 @@ html {
   background-image:  url("/images/piqselslaunch.jpg");
   background-position: center center;
   background-size: cover;
-  min-height: 1000px;
+  min-width: 100%;
+  min-height: 100%;
   font-family: 'jaapokki';
 }
 
 h1 {
-  color: #d9c4a9;
-  padding: 10px;
-}
+    color: #d9c4a9;
+    padding: 10px;
+  }
 
 .box {
   color: #fff;
