@@ -16,7 +16,7 @@ app.use(express.static("public"));
 
 
 //connecting MongoDB
-mongoose.connect("mongodb+srv://admin-euphros:JuhyGtfr321@cluster0-bux23.mongodb.net/todolistDB", {useNewUrlParser: true});
+mongoose.connect("mongodb+srv://admin-euphros:password@cluster0-bux23.mongodb.net/todolistDB", {useNewUrlParser: true});
 
 //Creating the item Schema
 const itemsSchema = {
