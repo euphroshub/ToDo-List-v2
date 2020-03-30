@@ -1,3 +1,5 @@
+
+
 @font-face {
   font-weight: normal;
   font-style: normal;
@@ -11,27 +13,32 @@
 
 
 html {
-  background-image:  url("/images/piqselslaunch.jpg");
+  background-image:  url("/images/sky.jpg");
   background-position: center center;
   background-size: cover;
-  min-height: 1000px;
+  min-width: 100%;
+  min-height: 100%;
   font-family: 'jaapokki';
 }
 
-h1 {
-  color: #d9c4a9;
-  padding: 10px;
-}
 
+h1 {
+    color: #fff;
+    padding: 10px;
+  }
+
+/* list box */
 .box {
+  background-color: #010101;
   color: #fff;
   opacity: 0.8;
   max-width: 400px;
   margin: 50px auto;
   border-radius: 5px;
-  box-shadow: 5px 5px 15px -5px rgba(25, 130, 177, 1);
+  box-shadow: 5px 5px 15px -5px rgba(61, 46, 20, 1);
 }
 
+/* title */
 #heading {
   text-align: center;
 }
@@ -40,22 +47,24 @@ h1 {
   min-height: 70px;
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #1982b1;
+  border-bottom: 1px solid #5b2901;
+
 }
 
 .item:last-child {
   border-bottom: 0;
 }
 
+/* checkbox */
 input:checked+p {
   text-decoration: line-through;
-  text-decoration-color: #f4aa85;
+  text-decoration-color: #5b2901;
 }
 
 input[type="checkbox"] {
   margin: 20px;
 }
-
+/* form text section */
 p {
   margin: 0;
   padding: 20px;
@@ -67,26 +76,29 @@ p {
 form.item {
   text-align: center;
   margin-left: 20px;
-}
 
+}
+/* the button */
 button {
   min-height: 50px;
   width: 50px;
   border-radius: 50%;
   border-color: transparent;
-  background-color: #1982b1;
-  color: #fff;
+  background-color: #fda500;
+  color: #5b2901;
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
 }
 
+/* input field */
 input[type="text"] {
   text-align: center;
   height: 60px;
   top: 10px;
   color: #fff;
   border: none;
+  font-family: 'jaapokki';
   background: transparent;
   font-size: 20px;
   font-weight: 200;
@@ -100,12 +112,89 @@ input[type="text"]:focus {
 
 ::placeholder {
   font-family: 'jaapokki';
-  color: #1982b1;
+  color: #fda500;
   opacity: 1;
 }
 
-footer {
-  padding-top: 25rem;
-  color: white;
+/* footer section
+ */
+.footer {
+  font-family: 'jaapokki';
+  font-size: 9px;
+  background-color: #001418;
+  opacity: 0.5;
+  color: #010101;
+  padding: 2% 2%;
   text-align: center;
+  margin-top: 80%;
+  margin-bottom: 2%;
+}
+
+.footer-link {
+  color: #fda500;
+  padding: 3% 3%;
+}
+
+.copyright {
+  font-size: 10px;
+}
+
+
+/* Media query for the app footer */
+@media only screen and (max-width: 1366px) {
+  .footer {
+    margin-top: 120%;
+    margin-bottom: 2%;
+  }
+
+}
+
+/* ----------------profile animation---------------------*/
+
+@keyframes cresent {
+  0% {
+    transform: translate(-30px, 30px) scale(0.9);
+    box-shadow: none;
+  }
+
+  50% {
+    transform: translate(0px, 0px) scale(1.02);
+    box-shadow: 0 0 10px #fda500, 0 0 80px 8px #5b2901;
+    background-color: #fed16d;
+  }
+
+  100% {
+    transform: translate(30px, -30px) scale(0.9);
+    box-shadow: none;
+  }
+}
+
+
+.profile {
+  background-image: linear-gradient(30deg, #fed16d, #fed16d);
+  width: 200px;
+  height: 200px;
+  display: block;
+  margin: 75px auto;
+  border-radius: 50%;
+  position: center;
+
+}
+
+.profile::before {
+  content: '';
+  background-color: #7d4101;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  animation: 3.0s cresent linear infinite alternate;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        width: 160px;
+        height: 160px;
+    }
 }

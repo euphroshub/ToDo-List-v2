@@ -27,15 +27,15 @@ const Item = mongoose.model("Item", itemsSchema);
 
 //Creating the 3 default item in the Lists.
 const item1 = new Item({
-  name: "Welcome to your To do List!"
+  name: "Welcome to the To Do List!"
 });
 
 const item2 = new Item({
-  name: "<-- Hit this one to delete an item."
+  name: "Hit the + button to add an item."
 });
 
 const item3 = new Item({
-  name: "Hit the + button to add an item."
+  name: "Hit the checkbox to delete an item."
 });
 
 const defaultItems = [item1, item2, item3];
@@ -138,10 +138,6 @@ app.post("/delete", function(req, res){
     });
   }
 
-});
-
-app.get("/about", function(req, res){
-  res.render("about");
 });
 
 //listening on the correct port on Heroku
